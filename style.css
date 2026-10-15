@@ -1,0 +1,209 @@
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    color: #172554;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 26px;
+    color: #60a5fa !important;
+}
+
+.nav-link {
+    margin-left: 12px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #60a5fa !important;
+}
+
+/* CSS-only responsive menu */
+.menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+/* Hero */
+.hero {
+    min-height: 500px;
+    padding: 80px 0;
+    color: white;
+    background: linear-gradient(120deg, #172554, #2563eb);
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Buttons */
+.btn {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Services */
+.service-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1d4ed8;
+    margin-bottom: 18px;
+}
+
+/* About */
+.about-section {
+    background: #f1f5f9;
+}
+
+.about-image {
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+}
+
+.about-placeholder span {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.about-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section li {
+    margin-bottom: 10px;
+}
+
+/* Contact */
+.contact-form {
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+    padding: 12px;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+/* Footer */
+footer {
+    background: #111827 !important;
+}
+
+footer h4 {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+/* Tablet and mobile */
+@media (max-width: 991.98px) {
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: block;
+    }
+
+    .nav-links .navbar-nav {
+        padding-top: 12px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 575.98px) {
+    .hero {
+        min-height: 400px;
+        padding: 55px 0;
+        text-align: center;
+    }
+
+    .hero .btn {
+        margin: 5px 0;
+    }
+
+    .about-image {
+        min-height: 220px;
+    }
+
+    .contact-form {
+        padding: 20px !important;
+    }
+}
